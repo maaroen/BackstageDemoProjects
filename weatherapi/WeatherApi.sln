@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi.Api", "WeatherApi.Api\WeatherApi.Api.csproj", "{EF11C97E-F23C-4ECE-B971-92B3E9BDECFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{7842F83C-CB61-4B70-AB7C-EF4A8E4885DD}"
+	ProjectSection(SolutionItems) = preProject
+		catalog-info.yaml = catalog-info.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF11C97E-F23C-4ECE-B971-92B3E9BDECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF11C97E-F23C-4ECE-B971-92B3E9BDECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF11C97E-F23C-4ECE-B971-92B3E9BDECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF11C97E-F23C-4ECE-B971-92B3E9BDECFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
