@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: weather-web
+  description: Get the best weather here!
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/rockstars
+  system: backstage-weather-demo
+#  dependsOn:
+#    - resource:default/artists-db
+  consumesApis:
+    - weather-api
