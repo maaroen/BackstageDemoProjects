@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
-  name: weather
+  name: weather-domain
   description: All resources concerning weather forcasting
 spec:
   owner: group:default/rockstars 
