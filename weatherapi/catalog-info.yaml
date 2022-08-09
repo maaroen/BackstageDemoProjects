@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: artist-relations-team
+  owner: group:default/rockstars
   system: artist-engagement-portal
   definition: 
     $text: https://github.com/jacobduijzer/BackstageDemoProjects/tree/main/weatherapi/WeatherApi.Api/swagger.json
