@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
-  name: artists
-  description: Everything related to artists
+  name: weather
+  description: Everything related to weather forcasting.
   links:
     - url: http://example.com/domain/artists/
       title: Domain Readme
