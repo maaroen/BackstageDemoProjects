@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: artist-api
-  description: Retrieve artist details
+  name: weather-api
+  description: Service to receive weather forcast
 spec:
   type: openapi
   lifecycle: production
   owner: group:default/rockstars
-  system: artist-engagement-portal
+  system: backstage-weather-demo
   definition: 
     $text: https://github.com/jacobduijzer/BackstageDemoProjects/tree/main/weatherapi/WeatherApi.Api/swagger.json
