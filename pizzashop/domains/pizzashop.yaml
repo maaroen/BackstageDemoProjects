@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: pizza-shop
+  description: The overall pizza shop domain
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - url: http://example.com/domain/artists/
+      title: Domain Readme
+    - url: http://example.com/domains/artists/dashboard
+      title: Domain Metrics Dashboard
+      icon: dashboard
+spec:
+  owner: group:default/rockstars
