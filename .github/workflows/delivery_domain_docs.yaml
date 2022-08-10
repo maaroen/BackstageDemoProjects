@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
 
+defaults:
+  run:
+    working-directory: ./pizzashop/domains/deliveries
+    
 jobs:
   publish-techdocs-site:
     runs-on: ubuntu-latest
