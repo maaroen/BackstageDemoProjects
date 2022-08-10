@@ -38,20 +38,20 @@ jobs:
       - name: Install mkdocs and mkdocs plugins
         run: python -m pip install mkdocs-techdocs-core==1.*
 
-      - name: Generate docs site
-        run: techdocs-cli generate --no-docker --verbose
-
       - name: Publish pizzashop docs
         working-directory: ./pizzashop/domains/pizzashop
-        run:          
+        run: |
+          techdocs-cli generate --no-docker --verbose
           techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizzashop
           
       - name: Publish pizza-delivery docs
         working-directory: ./pizzashop/domains/deliveries
-        run:          
+        run: |
+          techdocs-cli generate --no-docker --verbose
           techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizza-delivery
           
       - name: Publish pizza-order docs
         working-directory: ./pizzashop/domains/orders
-        run:          
+        run: |
+          techdocs-cli generate --no-docker --verbose
           techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizza-order   
