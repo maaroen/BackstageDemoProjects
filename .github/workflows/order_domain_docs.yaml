@@ -1,12 +1,12 @@
-name: Publish Order Domain TechDocs
+name: Publish Domain TechDocs
 
 on:
   push:
     branches: [main]
 
-defaults:
-  run:
-    working-directory: ./pizzashop/domains/orders
+#defaults:
+#  run:
+#    working-directory: ./pizzashop/domains/orders
     
 jobs:
   publish-techdocs-site:
@@ -18,7 +18,6 @@ jobs:
       TECHDOCS_STORAGE_ACCOUNT_KEY: ${{ secrets.TECHDOCS_STORAGE_ACCOUNT_KEY }}
       ENTITY_NAMESPACE: 'default'
       ENTITY_KIND: 'Domain'
-      ENTITY_NAME: 'pizza-order'
       
     steps:
       - name: Checkout code
@@ -46,6 +45,17 @@ jobs:
       - name: Generate docs site
         run: techdocs-cli generate --no-docker --verbose
 
-      - name: Publish docs site
-        run:
-          techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/$ENTITY_NAME
+      - name: Publish pizza-order docs
+        working-directory: ./pizzashop/domains/pizzashop
+        run:          
+          techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizzashop
+          
+      - name: Publish pizza-delivery docs
+        working-directory: ./pizzashop/domains/deliveries
+        run:          
+          techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizza-delivery
+          
+      - name: Publish pizza-order docs
+        working-directory: ./pizzashop/domains/orders
+        run:          
+          techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizza-order   
