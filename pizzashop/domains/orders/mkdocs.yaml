@@ -8,3 +8,7 @@ plugins:
   
 nav:
   - Overview: 'overview.md'
+  - Architecture:
+    - 'Context': 'architecture/context.md'
+    - 'Containers': 'architecture/containers.md'
+    - 'Components': 'architecture/components.md'
