@@ -41,7 +41,7 @@ jobs:
       - name: Generate docs site
         run: techdocs-cli generate --no-docker --verbose
 
-      - name: Publish pizza-order docs
+      - name: Publish pizzashop docs
         working-directory: ./pizzashop/domains/pizzashop
         run:          
           techdocs-cli publish --publisher-type azureBlobStorage --azureAccountName $TECHDOCS_STORAGE_ACCOUNT --azureAccountKey $TECHDOCS_STORAGE_ACCOUNT_KEY --storage-name $TECHDOCS_CONTAINER_NAME --entity $ENTITY_NAMESPACE/$ENTITY_KIND/pizzashop
