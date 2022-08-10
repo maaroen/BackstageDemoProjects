@@ -3,10 +3,6 @@ name: Publish Domain TechDocs
 on:
   push:
     branches: [main]
-
-#defaults:
-#  run:
-#    working-directory: ./pizzashop/domains/orders
     
 jobs:
   publish-techdocs-site:
