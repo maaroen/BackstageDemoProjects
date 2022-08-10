@@ -3,7 +3,7 @@
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
-ExternalSystem(serviceBus, "Service Bus")
+System_Ext(serviceBus, "Service Bus")
 System(orderSystem, "Order System")
 
 Rel(serviceBus, orderSystem, "order updates", "Message")
