@@ -6,11 +6,14 @@
 Enterprise_Boundary(pizzaEnterprise, "PizzaShop") {
 
   System_Boundary(platform, "Platform") {
-    Container(serviceBus, "Service bus", "RabbitMq")
+    ContainerQueue(serviceBus, "Service bus", "RabbitMq")
   }
 
   System_Boundary(orderSystem, "Order System") {
     Container(orderApi, "Order Api", ".NET Web Api", "Processing order status")
+    ContainerDb(orderDb, "Orders", "PostgreSql")
+
+    BiRel(orderApi, orderDb, "Order details")
   }
 
   Rel(serviceBus, orderApi, "order details", "messaging")
