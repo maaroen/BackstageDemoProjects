@@ -1,6 +1,6 @@
 site_name: 'Pizza Deliveries'
 site_description: 'Main documentation for the Pizza Deliveries domain'
-repo_url: https://github.com/jacobduijzer/SomeExampleApplication
+repo_url: https://github.com/jacobduijzer/BackstageDemoProjects/tree/main/pizzashop/domains/deliveries
 edit_uri: edit/master/docs
 
 plugins:
