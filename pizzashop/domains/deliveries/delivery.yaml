@@ -3,6 +3,8 @@ kind: Domain
 metadata:
   name: pizza-delivery
   description: All logic and applications regarding deliveries
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   links:
     - url: http://example.com/domain/artists/
       title: Domain Readme

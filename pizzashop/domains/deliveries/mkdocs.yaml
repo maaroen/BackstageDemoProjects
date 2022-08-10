@@ -1,0 +1,10 @@
+site_name: 'Pizza Deliveries'
+site_description: 'Main documentation for the Pizza Deliveries domain'
+repo_url: https://github.com/jacobduijzer/SomeExampleApplication
+edit_uri: edit/master/docs
+
+plugins:
+  - techdocs-core
+  
+nav:
+  - Overview: 'overview.md'
