@@ -12,4 +12,4 @@ metadata:
       title: Domain Metrics Dashboard
       icon: dashboard
 spec:
-  owner: group:default/rockstars
+  owner: maaroen
