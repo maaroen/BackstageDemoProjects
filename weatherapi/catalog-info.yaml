@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/rockstars
+  owner: maaroen
   system: backstage-weather-demo
   definition: 
     $text: https://github.com/jacobduijzer/BackstageDemoProjects/tree/main/weatherapi/WeatherApi.Api/swagger.json
