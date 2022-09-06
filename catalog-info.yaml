@@ -4,5 +4,5 @@ metadata:
   name: backstage-weather-demo
   description: A complete weather forecasting application, with a frontend and a backand API.
 spec:
-  owner: group:default/maaroen
+  owner: maaroen
   domain: weather
