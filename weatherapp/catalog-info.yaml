@@ -6,7 +6,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: group:default/rockstars
+  owner: group:default/maaroen
   system: backstage-weather-demo
 #  dependsOn:
 #    - resource:default/artists-db
